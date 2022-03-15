@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-cd
+  name: argo-events
 spec:
   destination:
     namespace: default
@@ -13,7 +13,7 @@ spec:
       kind: Application
   project: default
   source:
-    path: components/argo-events
+    path: components/argo-events/resources
     repoURL: https://github.com/roi-codefresh/csdp-official-runtime.git
   syncPolicy:
     automated:
